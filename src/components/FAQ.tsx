@@ -36,13 +36,13 @@ export function FAQ() {
   };
 
   return (
-    <section className="bg-white py-24">
-      <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-[clamp(2rem,5vw,3rem)] font-semibold leading-tight tracking-tight text-neutral-900 text-center mb-12">
+    <section className="bg-white py-12 sm:py-16 md:py-24">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <h2 className="text-[clamp(1.75rem,4vw,3rem)] font-semibold leading-tight tracking-tight text-neutral-900 text-center mb-8 sm:mb-12">
           Frequently Asked Questions
         </h2>
         
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -50,9 +50,9 @@ export function FAQ() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                className="w-full px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
               >
-                <span className="text-lg font-semibold text-neutral-900 pr-4">
+                <span className="text-base sm:text-lg font-semibold text-neutral-900 pr-3 sm:pr-4">
                   {faq.question}
                 </span>
                 <svg
@@ -68,8 +68,8 @@ export function FAQ() {
               </button>
               
               {openIndex === index && (
-                <div className="px-6 pb-4">
-                  <p className="text-neutral-700 leading-relaxed">
+                <div className="px-4 sm:px-6 pb-3 sm:pb-4">
+                  <p className="text-sm sm:text-base text-neutral-700 leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -78,16 +78,16 @@ export function FAQ() {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-neutral-600 mb-4">
+        <div className="mt-8 sm:mt-12 text-center px-4">
+          <p className="text-sm sm:text-base text-neutral-600 mb-4">
             Want to learn more about peptides?
           </p>
           <Link 
             to="/peptides"
-            className="inline-flex items-center text-[#87CEEB] font-semibold hover:text-[#79c9f0] transition-colors"
+            className="inline-flex items-center text-[#87CEEB] font-semibold hover:text-[#79c9f0] transition-colors text-sm sm:text-base"
           >
             Read Our Complete Guide
-            <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>

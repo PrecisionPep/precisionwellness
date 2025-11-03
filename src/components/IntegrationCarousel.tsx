@@ -12,25 +12,25 @@ export function IntegrationCarousel() {
   ];
 
   return (
-    <section className="py-12 bg-white">
+    <section className="py-8 sm:py-12 bg-white">
       <div className="relative overflow-hidden">
         {/* Left gradient */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white via-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-white via-white to-transparent z-10 pointer-events-none"></div>
         {/* Right gradient */}
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white via-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-white via-white to-transparent z-10 pointer-events-none"></div>
         
         {/* Marquee container */}
         <div className="marquee-wrapper flex">
-          <div className="marquee-content flex gap-4 px-8 flex-shrink-0 items-center">
+          <div className="marquee-content flex gap-2 sm:gap-4 px-4 sm:px-8 flex-shrink-0 items-center">
             {categories.map((category, index) => (
-              <Link key={`first-${index}`} to="/products" className="chat-integration-items flex flex-row items-center gap-3 flex-shrink-0 px-5 py-3 rounded-full hover:opacity-90 transition-opacity" style={{ backgroundColor: '#87CEEB' }}>
-                <div className="text-base font-medium text-neutral-900 whitespace-nowrap">{category}</div>
+              <Link key={`first-${index}`} to="/products" className="chat-integration-items flex flex-row items-center gap-2 sm:gap-3 flex-shrink-0 px-3 py-2 sm:px-5 sm:py-3 rounded-full hover:opacity-90 transition-opacity" style={{ backgroundColor: '#87CEEB' }}>
+                <div className="text-xs sm:text-sm md:text-base font-medium text-neutral-900 whitespace-nowrap">{category}</div>
               </Link>
             ))}
             {/* Duplicate for seamless loop */}
             {categories.map((category, index) => (
-              <Link key={`second-${index}`} to="/products" className="chat-integration-items flex flex-row items-center gap-3 flex-shrink-0 px-5 py-3 rounded-full hover:opacity-90 transition-opacity" style={{ backgroundColor: '#87CEEB' }}>
-                <div className="text-base font-medium text-neutral-900 whitespace-nowrap">{category}</div>
+              <Link key={`second-${index}`} to="/products" className="chat-integration-items flex flex-row items-center gap-2 sm:gap-3 flex-shrink-0 px-3 py-2 sm:px-5 sm:py-3 rounded-full hover:opacity-90 transition-opacity" style={{ backgroundColor: '#87CEEB' }}>
+                <div className="text-xs sm:text-sm md:text-base font-medium text-neutral-900 whitespace-nowrap">{category}</div>
               </Link>
             ))}
           </div>

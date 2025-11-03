@@ -57,55 +57,55 @@ export function MembershipCards() {
         </div>
 
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {memberships.map((membership) => (
             <div
               key={membership.name}
-              className={`relative rounded-2xl p-8 ${
+              className={`relative rounded-2xl p-6 sm:p-8 ${
                 membership.popular
                   ? 'bg-gray-900 text-white shadow-2xl'
                   : 'bg-gray-50 text-gray-900 shadow-lg border border-gray-200'
               } transition-all hover:scale-105 hover:shadow-2xl`}
             >
               {membership.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gray-700 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2 bg-gray-700 text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold">
                   Most popular
                 </div>
               )}
 
-              <div className="mb-6">
-                <h3 className="text-3xl font-bold mb-3">{membership.name}</h3>
-                <p className={`text-lg mb-4 ${membership.popular ? 'text-gray-300' : 'text-gray-700'}`}>
+              <div className="mb-4 sm:mb-6">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">{membership.name}</h3>
+                <p className={`text-base sm:text-lg mb-3 sm:mb-4 ${membership.popular ? 'text-gray-300' : 'text-gray-700'}`}>
                   {membership.subtitle}
                 </p>
-                <p className={`text-base mb-6 leading-relaxed ${membership.popular ? 'text-gray-300' : 'text-gray-600'}`}>
+                <p className={`text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed ${membership.popular ? 'text-gray-300' : 'text-gray-600'}`}>
                   {membership.description}
                 </p>
               </div>
 
-              <div className="mb-6">
-                <span className="text-5xl font-bold">${membership.price}/mo</span>
-                <p className={`text-base mt-2 ${membership.popular ? 'text-gray-300' : 'text-gray-600'}`}>
+              <div className="mb-4 sm:mb-6">
+                <span className="text-4xl sm:text-5xl font-bold">${membership.price}/mo</span>
+                <p className={`text-sm sm:text-base mt-2 ${membership.popular ? 'text-gray-300' : 'text-gray-600'}`}>
                   billed monthly
                 </p>
               </div>
 
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {membership.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3">
+                  <li key={index} className="flex items-start gap-2 sm:gap-3">
                     <Check
-                      size={24}
-                      className={`flex-shrink-0 mt-0.5 ${
+                      size={20}
+                      className={`flex-shrink-0 mt-0.5 sm:mt-1 ${
                         membership.popular ? 'text-white' : 'text-gray-900'
                       }`}
                     />
-                    <span className="text-base">{feature}</span>
+                    <span className="text-sm sm:text-base">{feature}</span>
                   </li>
                 ))}
               </ul>
 
               <button
-                className={`w-full py-4 rounded-lg font-semibold transition-all ${
+                className={`w-full py-3 sm:py-4 rounded-lg text-sm sm:text-base font-semibold transition-all ${
                   membership.popular
                     ? 'bg-white text-gray-900 hover:bg-gray-100'
                     : 'bg-gray-900 text-white hover:bg-gray-800'

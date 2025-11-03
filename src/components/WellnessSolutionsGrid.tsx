@@ -33,17 +33,17 @@ export function WellnessSolutionsGrid() {
   ];
 
   return (
-    <section className="bg-white py-24">
-      <div className="mx-auto max-w-7xl px-6">
-        <h2 className="text-[clamp(2rem,5vw,3rem)] font-semibold leading-tight tracking-tight text-neutral-900 mb-10">
+    <section className="bg-white py-12 sm:py-16 md:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <h2 className="text-[clamp(1.75rem,4vw,3rem)] font-semibold leading-tight tracking-tight text-neutral-900 mb-8 sm:mb-10">
           Wellness Solutions
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {solutions.map((solution, index) => (
             <a
               key={index}
               href="https://www.joinblvd.com/b/smilespawellness/widget#/visit-type"
-              className="group relative overflow-hidden rounded-2xl bg-[#EAE7DC] min-h-[340px] flex transition-transform hover:scale-[1.02]"
+              className="group relative overflow-hidden rounded-2xl bg-[#EAE7DC] min-h-[280px] sm:min-h-[320px] md:min-h-[340px] flex transition-transform hover:scale-[1.02]"
             >
               <div className="absolute inset-0">
                 <img
@@ -58,10 +58,10 @@ export function WellnessSolutionsGrid() {
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/40 to-transparent"
               ></div>
-              <div className="relative z-10 mt-auto w-full px-6 py-5 flex items-center justify-between">
-                <h3 className="text-white text-lg md:text-xl font-bold leading-tight">{solution.title}</h3>
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-neutral-900 shadow-sm transition-transform group-hover:translate-x-1">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div className="relative z-10 mt-auto w-full px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between">
+                <h3 className="text-white text-base sm:text-lg md:text-xl font-bold leading-tight pr-2">{solution.title}</h3>
+                <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-white/95 text-neutral-900 shadow-sm transition-transform group-hover:translate-x-1 flex-shrink-0">
+                  <svg width="16" height="16" className="sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M5 12H19M19 12L12 5M19 12L12 19"
                       stroke="currentColor"

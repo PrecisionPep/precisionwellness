@@ -8,13 +8,13 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 bg-neutral-light/95 backdrop-blur-sm z-50 border-b border-secondary">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16 sm:h-20">
           <div className="flex items-center">
             <Link to="/" className="flex items-center transition-transform hover:scale-110">
               <img 
                 src="/precisionwellnesslogo.png" 
                 alt="Precision Wellness" 
-                className="h-28 w-auto"
+                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto"
                 style={{ imageRendering: 'auto' }}
               />
             </Link>
