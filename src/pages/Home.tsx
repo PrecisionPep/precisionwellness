@@ -4,7 +4,6 @@ import { ReadyToTakeCommand } from '../components/ReadyToTakeCommand';
 import { MembershipInfo } from '../components/MembershipInfo';
 import { HealthConcerns } from '../components/HealthConcerns';
 import { WellnessSolutionsGrid } from '../components/WellnessSolutionsGrid';
-import { TeamTestimonials } from '../components/TeamTestimonials';
 import { MembershipCards } from '../components/MembershipCards';
 import { TeamSection } from '../components/TeamSection';
 import { PeptideEducation } from '../components/PeptideEducation';
@@ -23,7 +22,6 @@ export function Home() {
       <MembershipInfo />
       <HealthConcerns />
       <WellnessSolutionsGrid />
-      <TeamTestimonials />
       <MembershipCards />
       <GLPCalculator />
       <TeamSection />
