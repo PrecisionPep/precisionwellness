@@ -659,12 +659,12 @@ export function Products() {
                       </div>
                     </div>
                     <div className="flex gap-3">
-                      <Link
-                        to={`/products/weight-management/${product.slug}`}
+                      <a
+                        href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="flex-1 bg-neutral-900 text-white font-semibold py-3 px-6 rounded-full hover:bg-black transition-colors text-center"
                       >
                         View Product
-                      </Link>
+                      </a>
                       <a
                         href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="px-6 py-3 border-2 border-neutral-300 rounded-full font-semibold text-neutral-700 hover:border-neutral-400 transition-colors"
@@ -714,12 +714,12 @@ export function Products() {
                       </div>
                     </div>
                     <div className="flex gap-3">
-                      <Link
-                        to={`/products/fitness-performance/${product.slug}`}
+                      <a
+                        href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="flex-1 bg-neutral-900 text-white font-semibold py-3 px-6 rounded-full hover:bg-black transition-colors text-center"
                       >
                         View Product
-                      </Link>
+                      </a>
                       <a
                         href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="px-6 py-3 border-2 border-neutral-300 rounded-full font-semibold text-neutral-700 hover:border-neutral-400 transition-colors"
@@ -769,12 +769,12 @@ export function Products() {
                       </div>
                     </div>
                     <div className="flex gap-3">
-                      <Link
-                        to={`/products/tissue-repair-recovery/${product.slug}`}
+                      <a
+                        href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="flex-1 bg-neutral-900 text-white font-semibold py-3 px-6 rounded-full hover:bg-black transition-colors text-center"
                       >
                         View Product
-                      </Link>
+                      </a>
                       <a
                         href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="px-6 py-3 border-2 border-neutral-300 rounded-full font-semibold text-neutral-700 hover:border-neutral-400 transition-colors"
@@ -824,12 +824,12 @@ export function Products() {
                       </div>
                     </div>
                     <div className="flex gap-3">
-                      <Link
-                        to={`/products/oral-peptides/${product.slug}`}
+                      <a
+                        href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="flex-1 bg-neutral-900 text-white font-semibold py-3 px-6 rounded-full hover:bg-black transition-colors text-center"
                       >
                         View Product
-                      </Link>
+                      </a>
                       <a
                         href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="px-6 py-3 border-2 border-neutral-300 rounded-full font-semibold text-neutral-700 hover:border-neutral-400 transition-colors"
@@ -879,12 +879,12 @@ export function Products() {
                       </div>
                     </div>
                     <div className="flex gap-3">
-                      <Link
-                        to={`/products/organ-system-support/${product.slug}`}
+                      <a
+                        href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="flex-1 bg-neutral-900 text-white font-semibold py-3 px-6 rounded-full hover:bg-black transition-colors text-center"
                       >
                         View Product
-                      </Link>
+                      </a>
                       <a
                         href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="px-6 py-3 border-2 border-neutral-300 rounded-full font-semibold text-neutral-700 hover:border-neutral-400 transition-colors"
@@ -934,12 +934,12 @@ export function Products() {
                       </div>
                     </div>
                     <div className="flex gap-3">
-                      <Link
-                        to={`/products/health-anti-aging/${product.slug}`}
+                      <a
+                        href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="flex-1 bg-neutral-900 text-white font-semibold py-3 px-6 rounded-full hover:bg-black transition-colors text-center"
                       >
                         View Product
-                      </Link>
+                      </a>
                       <a
                         href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="px-6 py-3 border-2 border-neutral-300 rounded-full font-semibold text-neutral-700 hover:border-neutral-400 transition-colors"
@@ -989,12 +989,12 @@ export function Products() {
                       </div>
                     </div>
                     <div className="flex gap-3">
-                      <Link
-                        to={`/products/aesthetics/${product.slug}`}
+                      <a
+                        href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="flex-1 bg-neutral-900 text-white font-semibold py-3 px-6 rounded-full hover:bg-black transition-colors text-center"
                       >
                         View Product
-                      </Link>
+                      </a>
                       <a
                         href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="px-6 py-3 border-2 border-neutral-300 rounded-full font-semibold text-neutral-700 hover:border-neutral-400 transition-colors"
