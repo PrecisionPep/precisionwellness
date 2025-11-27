@@ -49,7 +49,7 @@ export function HealthConcerns() {
             Designed to meet you where you are - this is your health journey, we're just here to support it
           </p>
           <a 
-            href="https://www.joinblvd.com/b/smilespawellness/widget#/visit-type" 
+            href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login" 
             className="mt-4 inline-flex items-center justify-center rounded-full bg-[#87CEEB] px-5 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold text-black hover:bg-[#79c9f0] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#87CEEB]/60"
           >
             Explore treatments

@@ -42,7 +42,7 @@ export function WellnessSolutionsGrid() {
           {solutions.map((solution, index) => (
             <a
               key={index}
-              href="https://www.joinblvd.com/b/smilespawellness/widget#/visit-type"
+              href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
               className="group relative overflow-hidden rounded-2xl bg-[#EAE7DC] min-h-[280px] sm:min-h-[320px] md:min-h-[340px] flex transition-transform hover:scale-[1.02]"
             >
               <div className="absolute inset-0">

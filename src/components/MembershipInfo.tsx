@@ -44,10 +44,10 @@ export function MembershipInfo() {
             </div>
           </div>
           <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-0">
-            <a href="https://www.joinblvd.com/b/smilespawellness/widget#/visit-type" className="inline-flex items-center justify-center rounded-full px-5 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 active:scale-[0.98] bg-[#87CEEB] text-neutral-900 hover:bg-[#79c9f0]">
+            <a href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login" className="inline-flex items-center justify-center rounded-full px-5 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 active:scale-[0.98] bg-[#87CEEB] text-neutral-900 hover:bg-[#79c9f0]">
               Visit Make Wellness
             </a>
-            <a href="https://www.joinblvd.com/b/smilespawellness/widget#/visit-type" className="sm:mt-4 sm:ml-4 inline-block text-xs sm:text-sm font-semibold underline decoration-2 underline-offset-4 text-center sm:text-left">
+            <a href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login" className="sm:mt-4 sm:ml-4 inline-block text-xs sm:text-sm font-semibold underline decoration-2 underline-offset-4 text-center sm:text-left">
               Or, book a consultation
             </a>
           </div>

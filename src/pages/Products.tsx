@@ -666,7 +666,7 @@ export function Products() {
                         View Product
                       </Link>
                       <a
-                        href="https://www.joinblvd.com/b/smilespawellness/widget#/visit-type"
+                        href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="px-6 py-3 border-2 border-neutral-300 rounded-full font-semibold text-neutral-700 hover:border-neutral-400 transition-colors"
                       >
                         Add to Cart
@@ -721,7 +721,7 @@ export function Products() {
                         View Product
                       </Link>
                       <a
-                        href="https://www.joinblvd.com/b/smilespawellness/widget#/visit-type"
+                        href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="px-6 py-3 border-2 border-neutral-300 rounded-full font-semibold text-neutral-700 hover:border-neutral-400 transition-colors"
                       >
                         Add to Cart
@@ -776,7 +776,7 @@ export function Products() {
                         View Product
                       </Link>
                       <a
-                        href="https://www.joinblvd.com/b/smilespawellness/widget#/visit-type"
+                        href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="px-6 py-3 border-2 border-neutral-300 rounded-full font-semibold text-neutral-700 hover:border-neutral-400 transition-colors"
                       >
                         Add to Cart
@@ -831,7 +831,7 @@ export function Products() {
                         View Product
                       </Link>
                       <a
-                        href="https://www.joinblvd.com/b/smilespawellness/widget#/visit-type"
+                        href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="px-6 py-3 border-2 border-neutral-300 rounded-full font-semibold text-neutral-700 hover:border-neutral-400 transition-colors"
                       >
                         Add to Cart
@@ -886,7 +886,7 @@ export function Products() {
                         View Product
                       </Link>
                       <a
-                        href="https://www.joinblvd.com/b/smilespawellness/widget#/visit-type"
+                        href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="px-6 py-3 border-2 border-neutral-300 rounded-full font-semibold text-neutral-700 hover:border-neutral-400 transition-colors"
                       >
                         Add to Cart
@@ -941,7 +941,7 @@ export function Products() {
                         View Product
                       </Link>
                       <a
-                        href="https://www.joinblvd.com/b/smilespawellness/widget#/visit-type"
+                        href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="px-6 py-3 border-2 border-neutral-300 rounded-full font-semibold text-neutral-700 hover:border-neutral-400 transition-colors"
                       >
                         Add to Cart
@@ -996,7 +996,7 @@ export function Products() {
                         View Product
                       </Link>
                       <a
-                        href="https://www.joinblvd.com/b/smilespawellness/widget#/visit-type"
+                        href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                         className="px-6 py-3 border-2 border-neutral-300 rounded-full font-semibold text-neutral-700 hover:border-neutral-400 transition-colors"
                       >
                         Add to Cart
