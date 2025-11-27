@@ -56,6 +56,10 @@ export function Header() {
                 <Phone size={16} />
                 985-999-4667
               </a>
+              <a href="mailto:info@precisionpep.com" className="flex items-center gap-2 text-neutral-dark hover:text-primary transition-colors">
+                <Mail size={16} />
+                info@precisionpep.com
+              </a>
               <a href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login" className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-accent transition-all w-full flex items-center justify-center gap-2 shadow-lg hover:shadow-accent/40">
                 Get in touch
                 <ArrowRight size={16} />

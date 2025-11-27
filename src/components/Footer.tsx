@@ -100,6 +100,12 @@ export function Footer() {
                   985-999-4667
                 </a>
               </li>
+              <li>
+                <a href="mailto:info@precisionpep.com" className="flex items-center gap-2 text-sm sm:text-base text-neutral-dark/80 hover:text-primary transition-colors">
+                  <Mail size={16} />
+                  info@precisionpep.com
+                </a>
+              </li>
               <li><a href="#" className="text-sm sm:text-base text-neutral-dark/80 hover:text-primary transition-colors">Contact</a></li>
               <li><a href="#" className="text-sm sm:text-base text-neutral-dark/80 hover:text-primary transition-colors">FAQ</a></li>
               <li><a href="#" className="text-sm sm:text-base text-neutral-dark/80 hover:text-primary transition-colors">Accessibility</a></li>
