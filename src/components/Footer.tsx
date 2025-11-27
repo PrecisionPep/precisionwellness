@@ -1,4 +1,4 @@
-import { Mail } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export function Footer() {
@@ -52,6 +52,12 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-neutral-dark mb-3 sm:mb-4 text-sm sm:text-base">Support</h4>
             <ul className="space-y-2 sm:space-y-3">
+              <li>
+                <a href="tel:985-999-4667" className="flex items-center gap-2 text-sm sm:text-base text-neutral-dark/80 hover:text-primary transition-colors">
+                  <Phone size={16} />
+                  985-999-4667
+                </a>
+              </li>
               <li><a href="#" className="text-sm sm:text-base text-neutral-dark/80 hover:text-primary transition-colors">Contact</a></li>
               <li><a href="#" className="text-sm sm:text-base text-neutral-dark/80 hover:text-primary transition-colors">FAQ</a></li>
               <li><a href="#" className="text-sm sm:text-base text-neutral-dark/80 hover:text-primary transition-colors">Accessibility</a></li>
