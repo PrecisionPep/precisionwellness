@@ -1,7 +1,31 @@
 import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export function Footer() {
+  const [email, setEmail] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    
+    // Submit to Netlify Forms
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        'form-name': 'newsletter',
+        'email': email,
+      }).toString(),
+    })
+      .then(() => {
+        setSubmitted(true);
+        setEmail('');
+      })
+      .catch((error) => console.error('Error:', error));
+  };
+
   return (
     <footer className="bg-neutral-light border-t border-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
@@ -18,17 +42,35 @@ export function Footer() {
             <p className="text-sm sm:text-base text-neutral-dark/80 leading-relaxed mb-4 sm:mb-6">
               Monthly wellness tips, exclusive offers, and complimentary sample invites.
             </p>
-            <div className="flex items-center gap-2 bg-white border border-secondary rounded-lg relative">
-              <Mail className="ml-3 text-primary flex-shrink-0" size={18} />
-              <input
-                type="email"
-                placeholder="Your email"
-                className="flex-1 px-2 sm:px-3 py-2.5 sm:py-2 outline-none text-neutral-dark text-sm sm:text-base"
-              />
-              <button className="bg-primary text-white px-4 py-2.5 sm:py-2 hover:bg-accent transition-all flex-shrink-0 text-sm sm:text-base">
-                Subscribe
-              </button>
-            </div>
+            {submitted ? (
+              <p className="text-sm sm:text-base text-primary font-medium">Thanks for subscribing!</p>
+            ) : (
+              <form 
+                name="newsletter" 
+                method="POST" 
+                data-netlify="true"
+                onSubmit={handleSubmit}
+                className="flex items-center gap-2 bg-white border border-secondary rounded-lg relative"
+              >
+                <input type="hidden" name="form-name" value="newsletter" />
+                <Mail className="ml-3 text-primary flex-shrink-0" size={18} />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="flex-1 px-2 sm:px-3 py-2.5 sm:py-2 outline-none text-neutral-dark text-sm sm:text-base"
+                />
+                <button 
+                  type="submit"
+                  className="bg-primary text-white px-4 py-2.5 sm:py-2 hover:bg-accent transition-all flex-shrink-0 text-sm sm:text-base"
+                >
+                  Subscribe
+                </button>
+              </form>
+            )}
           </div>
 
           <div>
