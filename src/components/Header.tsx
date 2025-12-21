@@ -15,13 +15,24 @@ export function Header() {
     setIsMenuOpen(false);
   };
 
+  const handleHomeClick = (e: React.MouseEvent) => {
+    handleLinkClick();
+    // If already on home page, scroll to top
+    if (window.location.pathname === '/precisionwellness' || window.location.pathname === '/precisionwellness/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      // Update URL without navigation
+      window.history.pushState({}, '', '/precisionwellness/');
+    }
+  };
+
   return (
     <>
       <header className="fixed top-0 left-0 right-0 bg-neutral-light/95 backdrop-blur-sm z-50 border-b border-secondary" style={{ paddingTop: 'max(env(safe-area-inset-top), 0px)' }}>
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20">
             <div className="flex items-center flex-1">
-              <Link to="/" className="flex items-center transition-transform active:scale-95" onClick={handleLinkClick}>
+              <Link to="/" className="flex items-center transition-transform active:scale-95" onClick={handleHomeClick}>
                 <img 
                   src={getAssetPath('precisionwellnesslogo.png')}
                   alt="Precision Wellness" 
@@ -64,7 +75,7 @@ export function Header() {
                 <Link 
                   to="/" 
                   className="text-neutral-dark active:text-primary active:bg-neutral-100 transition-colors py-3 px-4 text-base font-medium min-h-[44px] flex items-center rounded-lg"
-                  onClick={handleLinkClick}
+                  onClick={handleHomeClick}
                 >
                   Home
                 </Link>
