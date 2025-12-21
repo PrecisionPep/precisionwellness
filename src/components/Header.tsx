@@ -1,10 +1,11 @@
 import { Menu, X, ArrowRight, Phone, Mail } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { getAssetPath } from '../utils/paths';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   // Close menu when clicking outside
   const handleMenuToggle = () => {
@@ -18,11 +19,9 @@ export function Header() {
   const handleHomeClick = (e: React.MouseEvent) => {
     handleLinkClick();
     // If already on home page, scroll to top
-    if (window.location.pathname === '/precisionwellness' || window.location.pathname === '/precisionwellness/') {
+    if (location.pathname === '/') {
       e.preventDefault();
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-      // Update URL without navigation
-      window.history.pushState({}, '', '/precisionwellness/');
     }
   };
 
