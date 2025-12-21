@@ -66,6 +66,12 @@ export function MembershipCards() {
                   ? 'bg-gray-900 text-white shadow-2xl'
                   : 'bg-gray-50 text-gray-900 shadow-lg border border-gray-200'
               } transition-all hover:scale-105 hover:shadow-2xl`}
+              onClick={(e) => {
+                // Prevent card click from interfering with button clicks
+                if ((e.target as HTMLElement).tagName !== 'A') {
+                  e.stopPropagation();
+                }
+              }}
             >
               {membership.popular && (
                 <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2 bg-gray-700 text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold">
@@ -108,11 +114,14 @@ export function MembershipCards() {
                 href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`w-full py-3 sm:py-4 rounded-lg text-sm sm:text-base font-semibold transition-all flex items-center justify-center min-h-[44px] ${
+                className={`w-full py-3 sm:py-4 rounded-lg text-sm sm:text-base font-semibold transition-all flex items-center justify-center min-h-[44px] cursor-pointer relative z-10 ${
                   membership.popular
                     ? 'bg-white text-gray-900 hover:bg-gray-100 active:bg-gray-100'
                     : 'bg-gray-900 text-white hover:bg-gray-800 active:bg-gray-800'
                 }`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
               >
                 {membership.name === 'Performance' && 'Start Membership'}
                 {membership.name === 'Transformation' && 'Start Transformation'}
