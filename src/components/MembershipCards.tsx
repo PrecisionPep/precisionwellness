@@ -104,17 +104,20 @@ export function MembershipCards() {
                 ))}
               </ul>
 
-              <button
-                className={`w-full py-3 sm:py-4 rounded-lg text-sm sm:text-base font-semibold transition-all ${
+              <a
+                href="https://blvd.app/66ea81b2-251f-42e2-8545-38200e8f97e7/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-full py-3 sm:py-4 rounded-lg text-sm sm:text-base font-semibold transition-all flex items-center justify-center min-h-[44px] ${
                   membership.popular
-                    ? 'bg-white text-gray-900 hover:bg-gray-100'
-                    : 'bg-gray-900 text-white hover:bg-gray-800'
+                    ? 'bg-white text-gray-900 hover:bg-gray-100 active:bg-gray-100'
+                    : 'bg-gray-900 text-white hover:bg-gray-800 active:bg-gray-800'
                 }`}
               >
                 {membership.name === 'Performance' && 'Start Membership'}
                 {membership.name === 'Transformation' && 'Start Transformation'}
                 {membership.name === 'Wellness' && 'Start Wellness'}
-              </button>
+              </a>
             </div>
           ))}
         </div>
