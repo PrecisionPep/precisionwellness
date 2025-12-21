@@ -6,15 +6,30 @@ export function ScrollToTop() {
 
   useEffect(() => {
     // Scroll to top on route change
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }, [pathname]);
 
   useEffect(() => {
-    // Scroll to top on initial mount
-    window.scrollTo(0, 0);
-    // Also ensure body is at top
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    // Aggressively scroll to top on initial mount
+    const forceScrollTop = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    };
+    
+    // Run immediately
+    forceScrollTop();
+    
+    // Run multiple times to ensure it sticks
+    const timeouts = [0, 10, 50, 100, 200, 500, 1000].map(delay => 
+      setTimeout(forceScrollTop, delay)
+    );
+    
+    return () => {
+      timeouts.forEach(clearTimeout);
+    };
   }, []);
 
   return null;
