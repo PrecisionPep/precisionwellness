@@ -9,23 +9,11 @@
   <body>
     <div id="root"></div>
     <script type="text/javascript">
-      // Ensure page starts at top immediately and remove any hash
-      (function() {
-        // Remove hash from URL first to prevent scrolling
-        if (window.location.hash) {
-          var url = window.location.href.split('#')[0];
-          window.history.replaceState(null, null, url);
-        }
-        
-        // Force scroll to top with instant behavior
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-        if (document.body) {
-          document.body.scrollTop = 0;
-        }
-        if (document.documentElement) {
-          document.documentElement.scrollTop = 0;
-        }
-      })();
+      // Remove hash from URL to prevent anchor scrolling
+      if (window.location.hash) {
+        var url = window.location.href.split('#')[0];
+        window.history.replaceState(null, null, url);
+      }
       
       // Single Page Apps for GitHub Pages
       // https://github.com/rafgraph/spa-github-pages
@@ -47,31 +35,7 @@
           newUrl = newUrl.split('#')[0];
           window.history.replaceState(null, null, newUrl);
         }
-        // Ensure we're at top after redirect processing
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-        if (document.body) {
-          document.body.scrollTop = 0;
-        }
-        if (document.documentElement) {
-          document.documentElement.scrollTop = 0;
-        }
       }(window.location))
-      
-      // Ensure we're at top when DOM is ready (once)
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function() {
-          window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-          if (document.body) document.body.scrollTop = 0;
-          if (document.documentElement) document.documentElement.scrollTop = 0;
-        }, { once: true });
-      }
-      
-      // Also ensure we're at top after page fully loads (once)
-      window.addEventListener('load', function() {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-        if (document.body) document.body.scrollTop = 0;
-        if (document.documentElement) document.documentElement.scrollTop = 0;
-      }, { once: true });
     </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
