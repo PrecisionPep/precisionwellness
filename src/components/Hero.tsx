@@ -1,3 +1,5 @@
+import { getAssetPath } from '../utils/paths';
+
 export function Hero() {
   return (
     <>
@@ -5,7 +7,7 @@ export function Hero() {
       <div 
         className="relative w-full pt-32 pb-12 sm:pt-40 md:pt-48 md:pb-20"
         style={{
-          backgroundImage: `url(${import.meta.env.BASE_URL}images/PrecisionWellness.png)`,
+          backgroundImage: `url(${getAssetPath('images/PrecisionWellness.png')})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

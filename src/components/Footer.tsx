@@ -1,6 +1,7 @@
 import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { getAssetPath } from '../utils/paths';
 
 export function Footer() {
   const [email, setEmail] = useState('');
@@ -33,7 +34,7 @@ export function Footer() {
           <div className="sm:col-span-2 md:col-span-1">
             <Link to="/" className="inline-block transition-transform hover:scale-110">
               <img 
-                src={`${import.meta.env.BASE_URL}precisionwellnesslogo.png`}
+                src={getAssetPath('precisionwellnesslogo.png')}
                 alt="Precision Wellness" 
                 className="h-20 sm:h-24 md:h-28 w-auto mb-4 sm:mb-6"
                 style={{ imageRendering: 'auto' }}

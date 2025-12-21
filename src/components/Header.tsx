@@ -1,6 +1,7 @@
 import { Menu, X, ArrowRight, Phone, Mail } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { getAssetPath } from '../utils/paths';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +13,7 @@ export function Header() {
           <div className="flex items-center">
             <Link to="/" className="flex items-center transition-transform hover:scale-105">
               <img 
-                src={`${import.meta.env.BASE_URL}precisionwellnesslogo.png`}
+                src={getAssetPath('precisionwellnesslogo.png')}
                 alt="Precision Wellness" 
                 className="h-12 sm:h-16 md:h-20 w-auto max-h-full"
                 style={{ imageRendering: 'auto' }}

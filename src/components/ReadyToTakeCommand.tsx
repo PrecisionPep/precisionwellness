@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { getAssetPath } from '../utils/paths';
 
 export function ReadyToTakeCommand() {
   return (
@@ -17,7 +18,7 @@ export function ReadyToTakeCommand() {
           <div className="group relative overflow-hidden rounded-3xl bg-[#dfeff5] p-6 sm:p-8 md:p-12 text-center">
             <div className="bg-[#dfeff5] rounded-xl inline-block p-3 sm:p-4">
               <img 
-                src={`${import.meta.env.BASE_URL}Join the peptime membership.png`}
+                src={getAssetPath('Join the peptime membership.png')}
                 alt="Assorted treatment bottles" 
                 className="mx-auto h-36 sm:h-48 w-auto object-contain md:h-56 select-none pointer-events-none"
                 style={{ imageRendering: 'auto' }}
@@ -38,7 +39,7 @@ export function ReadyToTakeCommand() {
 
           <div className="group relative overflow-hidden rounded-3xl bg-neutral-100 p-6 sm:p-8 md:p-12 text-center">
             <img 
-              src={`${import.meta.env.BASE_URL}Not sure which membership is best.png`}
+              src={getAssetPath('Not sure which membership is best.png')}
               alt="Telehealth consultation on phone" 
               className="mx-auto h-36 sm:h-48 w-auto object-contain md:h-56 select-none pointer-events-none rounded-xl"
               style={{ imageRendering: 'auto' }}

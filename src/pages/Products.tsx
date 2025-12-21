@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { getAssetPath } from '../utils/paths';
 import { useState } from 'react';
 
 export function Products() {
@@ -630,7 +631,7 @@ export function Products() {
                       <img
                         alt={product.name}
                         className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                        src={`${import.meta.env.BASE_URL}weightmanagement.png`}
+                        src={getAssetPath('weightmanagement.png')}
                         style={{ imageRendering: 'auto' }}
                       />
                       {product.featured && (
@@ -685,7 +686,7 @@ export function Products() {
                       <img
                         alt={product.name}
                         className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                        src={`${import.meta.env.BASE_URL}fitness.png`}
+                        src={getAssetPath('fitness.png')}
                         style={{ imageRendering: 'auto' }}
                       />
                       {product.featured && (
@@ -740,7 +741,7 @@ export function Products() {
                       <img
                         alt={product.name}
                         className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                        src={`${import.meta.env.BASE_URL}tissue.png`}
+                        src={getAssetPath('tissue.png')}
                         style={{ imageRendering: 'auto' }}
                       />
                       {product.featured && (
@@ -795,7 +796,7 @@ export function Products() {
                       <img
                         alt={product.name}
                         className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                        src={`${import.meta.env.BASE_URL}oral.png`}
+                        src={getAssetPath('oral.png')}
                         style={{ imageRendering: 'auto' }}
                       />
                       {product.featured && (
@@ -850,7 +851,7 @@ export function Products() {
                       <img
                         alt={product.name}
                         className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                        src={`${import.meta.env.BASE_URL}box.png`}
+                        src={getAssetPath('box.png')}
                         style={{ imageRendering: 'auto' }}
                       />
                       {product.featured && (
@@ -905,7 +906,7 @@ export function Products() {
                       <img
                         alt={product.name}
                         className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                        src={`${import.meta.env.BASE_URL}weight.png`}
+                        src={getAssetPath('weight.png')}
                         style={{ imageRendering: 'auto' }}
                       />
                       {product.featured && (
@@ -960,7 +961,7 @@ export function Products() {
                       <img
                         alt={product.name}
                         className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                        src={`${import.meta.env.BASE_URL}box.png`}
+                        src={getAssetPath('box.png')}
                         style={{ imageRendering: 'auto' }}
                       />
                       {product.featured && (
