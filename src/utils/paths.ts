@@ -1,5 +1,5 @@
-// Base URL for GitHub Pages
-const BASE_URL = '/precisionwellness/';
+// Base URL for custom domain (root)
+const BASE_URL = '/';
 
 // Helper function to get asset paths with base URL
 export const getAssetPath = (path: string): string => {

@@ -14,13 +14,11 @@
       // Note: this 404.html file must be at least 512 bytes for it to work
       // with Internet Explorer (it is currently > 512 bytes)
 
-      // If you're creating a Project Pages site and NOT using a custom domain,
-      // then set pathSegmentsToKeep to 1 (enterprise users may need to set it to > 1).
-      // This way the code will only replace the route part and not the real directory.
-      // For example, if your app is served from https://precisionpep.github.io/precisionwellness/,
-      // and the route is /products, then the pathSegmentsToKeep should be 1
-      // and the final URL will be https://precisionpep.github.io/precisionwellness/?/products
-      var pathSegmentsToKeep = 1;
+      // For custom domain (root deployment), set pathSegmentsToKeep to 0
+      // For example, if your app is served from https://yourdomain.com/,
+      // and the route is /products, then the pathSegmentsToKeep should be 0
+      // and the final URL will be https://yourdomain.com/?/products
+      var pathSegmentsToKeep = 0;
 
       var l = window.location;
       // Build the base path
