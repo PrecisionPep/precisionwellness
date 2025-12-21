@@ -630,7 +630,7 @@ export function Products() {
                       <img
                         alt={product.name}
                         className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                        src="/weightmanagement.png"
+                        src={`${import.meta.env.BASE_URL}weightmanagement.png`}
                         style={{ imageRendering: 'auto' }}
                       />
                       {product.featured && (
@@ -685,7 +685,7 @@ export function Products() {
                       <img
                         alt={product.name}
                         className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                        src="/fitness.png"
+                        src={`${import.meta.env.BASE_URL}fitness.png`}
                         style={{ imageRendering: 'auto' }}
                       />
                       {product.featured && (
@@ -740,7 +740,7 @@ export function Products() {
                       <img
                         alt={product.name}
                         className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                        src="/tissue.png"
+                        src={`${import.meta.env.BASE_URL}tissue.png`}
                         style={{ imageRendering: 'auto' }}
                       />
                       {product.featured && (
@@ -795,7 +795,7 @@ export function Products() {
                       <img
                         alt={product.name}
                         className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                        src="/oral.png"
+                        src={`${import.meta.env.BASE_URL}oral.png`}
                         style={{ imageRendering: 'auto' }}
                       />
                       {product.featured && (
@@ -850,7 +850,7 @@ export function Products() {
                       <img
                         alt={product.name}
                         className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                        src="/box.png"
+                        src={`${import.meta.env.BASE_URL}box.png`}
                         style={{ imageRendering: 'auto' }}
                       />
                       {product.featured && (
@@ -905,7 +905,7 @@ export function Products() {
                       <img
                         alt={product.name}
                         className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                        src="/weight.png"
+                        src={`${import.meta.env.BASE_URL}weight.png`}
                         style={{ imageRendering: 'auto' }}
                       />
                       {product.featured && (
@@ -960,7 +960,7 @@ export function Products() {
                       <img
                         alt={product.name}
                         className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                        src="/box.png"
+                        src={`${import.meta.env.BASE_URL}box.png`}
                         style={{ imageRendering: 'auto' }}
                       />
                       {product.featured && (

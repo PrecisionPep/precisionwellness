@@ -12,7 +12,7 @@ export function Header() {
           <div className="flex items-center">
             <Link to="/" className="flex items-center transition-transform hover:scale-105">
               <img 
-                src="/precisionwellnesslogo.png" 
+                src={`${import.meta.env.BASE_URL}precisionwellnesslogo.png`}
                 alt="Precision Wellness" 
                 className="h-12 sm:h-16 md:h-20 w-auto max-h-full"
                 style={{ imageRendering: 'auto' }}

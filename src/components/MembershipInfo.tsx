@@ -4,7 +4,7 @@ export function MembershipInfo() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 sm:gap-10 px-4 sm:px-6 md:grid-cols-2 md:gap-12">
         <div className="relative flex items-center justify-center">
           <div className="absolute -z-10 h-48 w-48 sm:h-72 sm:w-72 rounded-full bg-white/70 blur-2xl" aria-hidden="true"></div>
-          <img src="/Join the peptime membership.png" alt="Join the Peptide Membership" className="h-[300px] sm:h-[400px] md:h-[500px] w-auto object-contain drop-shadow-xl" style={{ imageRendering: 'auto' }} />
+          <img src={`${import.meta.env.BASE_URL}Join the peptime membership.png`} alt="Join the Peptide Membership" className="h-[300px] sm:h-[400px] md:h-[500px] w-auto object-contain drop-shadow-xl" style={{ imageRendering: 'auto' }} />
           <div className="absolute right-4 sm:right-10 top-4 sm:top-6 rounded-full bg-[#87CEEB] px-3 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-bold text-neutral-900 shadow-lg">
             $249/mo
             <div className="text-[10px] sm:text-xs font-medium">Membership pricing</div>
