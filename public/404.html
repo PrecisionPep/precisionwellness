@@ -16,11 +16,11 @@
 
       // If you're creating a Project Pages site and NOT using a custom domain,
       // then set pathSegmentsToKeep to 1 (enterprise users may need to set it to > 1).
-      // For root deployment (e.g., https://precisionpep.github.io/), set to 0
-      // For example, if your app is served from https://precisionpep.github.io/,
-      // and the route is /products, then the pathSegmentsToKeep should be 0
-      // and the final URL will be https://precisionpep.github.io/?/products
-      var pathSegmentsToKeep = 0;
+      // This way the code will only replace the route part and not the real directory.
+      // For example, if your app is served from https://precisionpep.github.io/precisionwellness/,
+      // and the route is /products, then the pathSegmentsToKeep should be 1
+      // and the final URL will be https://precisionpep.github.io/precisionwellness/?/products
+      var pathSegmentsToKeep = 1;
 
       var l = window.location;
       // Build the base path
