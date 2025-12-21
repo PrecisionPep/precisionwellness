@@ -1,33 +1,35 @@
+import { getAssetPath } from '../utils/paths';
+
 export function WellnessSolutionsGrid() {
   const solutions = [
     {
       title: 'Weight Management',
-      image: '/weightmanagement.png',
+      image: getAssetPath('weightmanagement.png'),
       alt: 'Weight Management'
     },
     {
       title: 'Fitness & Performance',
-      image: '/fitness.png',
+      image: getAssetPath('fitness.png'),
       alt: 'Fitness & Performance'
     },
     {
       title: 'Tissue Repair & Recovery',
-      image: '/tissue.png',
+      image: getAssetPath('tissue.png'),
       alt: 'Tissue Repair & Recovery'
     },
     {
       title: 'Oral Peptides',
-      image: '/oral.png',
+      image: getAssetPath('oral.png'),
       alt: 'Oral Peptides'
     },
     {
       title: 'Organ/System Support',
-      image: '/box.png',
+      image: getAssetPath('box.png'),
       alt: 'Organ/System Support'
     },
     {
       title: 'Health & Anti-Aging',
-      image: '/weight.png',
+      image: getAssetPath('weight.png'),
       alt: 'Health & Anti-Aging'
     }
   ];
