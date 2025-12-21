@@ -16,22 +16,28 @@
 
       // If you're creating a Project Pages site and NOT using a custom domain,
       // then set pathSegmentsToKeep to 1 (enterprise users may need to set it to > 1).
-      // This way the code will only replace the route part and not the real directory.
-      // For example, if your app is served from https://precisionpep.github.io/precisionwellness/,
-      // and the route is /products, then the pathSegmentsToKeep should be 1
-      // and the final URL will be https://precisionpep.github.io/precisionwellness/?/products
-      var pathSegmentsToKeep = 1;
+      // For root deployment (e.g., https://precisionpep.github.io/), set to 0
+      // For example, if your app is served from https://precisionpep.github.io/,
+      // and the route is /products, then the pathSegmentsToKeep should be 0
+      // and the final URL will be https://precisionpep.github.io/?/products
+      var pathSegmentsToKeep = 0;
 
       var l = window.location;
-      // Remove hash to prevent scrolling to anchor
-      var pathWithoutHash = l.pathname;
-      var searchWithoutHash = l.search;
+      // Build the base path
+      var basePath = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/');
+      // Ensure base path ends with / for root deployment
+      if (basePath === '' || basePath === '/') {
+        basePath = '/';
+      } else if (!basePath.endsWith('/')) {
+        basePath = basePath + '/';
+      }
+      // Get the route path (everything after the base)
+      var routePath = l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~');
       // Build the redirect URL without hash
       var redirectUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        basePath + '?/' + routePath +
         (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '');
-      // Don't include hash in redirect
+      // Don't include hash in redirect to prevent scrolling
       l.replace(redirectUrl);
 
     </script>
