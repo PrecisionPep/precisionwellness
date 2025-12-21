@@ -1022,7 +1022,7 @@ export function Products() {
                 Our wellness experts are here to help you find the perfect products for your goals
               </p>
               <Link
-                to="/#contact"
+                to="/"
                 className="inline-flex items-center bg-[#87CEEB] text-neutral-900 font-semibold py-3 px-8 rounded-full hover:bg-[#79c9f0] transition-colors"
               >
                 Get Personalized Recommendations
