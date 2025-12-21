@@ -19,7 +19,7 @@ export function Products() {
   const categoryProducts = [
     {
       title: 'Weight Management',
-      image: '/weightmanagement.png',
+      image: getAssetPath('weightmanagement.png'),
       alt: 'Weight Management',
       count: 8,
       price: 'From $199.99',
@@ -27,7 +27,7 @@ export function Products() {
     },
     {
       title: 'Fitness & Performance',
-      image: '/fitness.png',
+      image: getAssetPath('fitness.png'),
       alt: 'Fitness & Performance',
       count: 5,
       price: 'From $159.99',
@@ -35,7 +35,7 @@ export function Products() {
     },
     {
       title: 'Tissue Repair & Recovery',
-      image: '/tissue.png',
+      image: getAssetPath('tissue.png'),
       alt: 'Tissue Repair & Recovery',
       count: 6,
       price: 'From $89.99',
@@ -43,7 +43,7 @@ export function Products() {
     },
     {
       title: 'Oral Peptides',
-      image: '/oral.png',
+      image: getAssetPath('oral.png'),
       alt: 'Oral Peptides',
       count: 6,
       price: 'From $299.99',
@@ -51,7 +51,7 @@ export function Products() {
     },
     {
       title: 'Organ/System Support',
-      image: '/box.png',
+      image: getAssetPath('box.png'),
       alt: 'Organ/System Support',
       count: 7,
       price: 'From $89.99',
@@ -59,7 +59,7 @@ export function Products() {
     },
     {
       title: 'Health & Anti-Aging',
-      image: '/weight.png',
+      image: getAssetPath('weight.png'),
       alt: 'Health & Anti-Aging',
       count: 6,
       price: 'From $139.99',
@@ -67,7 +67,7 @@ export function Products() {
     },
     {
       title: 'Aesthetics & Skincare',
-      image: '/box.png',
+      image: getAssetPath('box.png'),
       alt: 'Aesthetics & Skincare',
       count: 1,
       price: 'From $89.99',
