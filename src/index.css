@@ -41,4 +41,9 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
     tap-highlight-color: rgba(0, 0, 0, 0.1);
   }
+
+  /* Touch manipulation for better mobile performance */
+  button, a {
+    touch-action: manipulation;
+  }
 }
