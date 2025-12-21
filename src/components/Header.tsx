@@ -1,4 +1,4 @@
-import { Menu, X, ArrowRight, Phone } from 'lucide-react';
+import { Menu, X, ArrowRight, Phone, Mail } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -10,11 +10,11 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center transition-transform hover:scale-110">
+            <Link to="/" className="flex items-center transition-transform hover:scale-105">
               <img 
                 src="/precisionwellnesslogo.png" 
                 alt="Precision Wellness" 
-                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto"
+                className="h-12 sm:h-16 md:h-20 w-auto max-h-full"
                 style={{ imageRendering: 'auto' }}
               />
             </Link>
