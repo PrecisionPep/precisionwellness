@@ -10,7 +10,7 @@ import { Privacy } from './pages/Privacy';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/precisionwellness">
       <ScrollToTop />
       <div className="min-h-screen bg-white">
         <Header />

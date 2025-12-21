@@ -9,16 +9,21 @@
   <body>
     <div id="root"></div>
     <script type="text/javascript">
-      // Ensure page starts at top immediately
+      // Ensure page starts at top immediately and remove any hash
       (function() {
-        window.scrollTo(0, 0);
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-        
-        // Remove any hash from URL to prevent browser from scrolling to anchor
+        // Remove hash from URL first to prevent scrolling
         if (window.location.hash) {
           var url = window.location.href.split('#')[0];
           window.history.replaceState(null, null, url);
+        }
+        
+        // Force scroll to top
+        window.scrollTo(0, 0);
+        if (document.body) {
+          document.body.scrollTop = 0;
+        }
+        if (document.documentElement) {
+          document.documentElement.scrollTop = 0;
         }
       })();
       
@@ -38,21 +43,37 @@
           }).join('?');
           // Remove hash from decoded URL to prevent scrolling
           var newUrl = l.pathname.slice(0, -1) + decoded;
-          // Remove any hash
+          // Remove any hash from the URL
           newUrl = newUrl.split('#')[0];
           window.history.replaceState(null, null, newUrl);
-          // Ensure we're still at top after history replace
-          window.scrollTo(0, 0);
+        }
+        // Ensure we're at top after redirect processing
+        window.scrollTo(0, 0);
+        if (document.body) {
           document.body.scrollTop = 0;
+        }
+        if (document.documentElement) {
           document.documentElement.scrollTop = 0;
         }
       }(window.location))
       
-      // Also ensure we're at top after page loads
+      // Ensure we're at top when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+          window.scrollTo(0, 0);
+          if (document.body) document.body.scrollTop = 0;
+          if (document.documentElement) document.documentElement.scrollTop = 0;
+        });
+      }
+      
+      // Also ensure we're at top after page fully loads
       window.addEventListener('load', function() {
-        window.scrollTo(0, 0);
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+        // Small delay to ensure everything is rendered
+        setTimeout(function() {
+          window.scrollTo(0, 0);
+          if (document.body) document.body.scrollTop = 0;
+          if (document.documentElement) document.documentElement.scrollTop = 0;
+        }, 0);
       });
     </script>
     <script type="module" src="/src/main.tsx"></script>
