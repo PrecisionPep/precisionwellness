@@ -58,7 +58,7 @@ export function HealthConcerns() {
         <div className="relative">
           <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-16 sm:h-20 md:h-24 bg-gradient-to-b from-[#fcfaf8] via-[#fcfaf8] to-transparent"></div>
           <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-16 sm:h-20 md:h-24 bg-gradient-to-t from-[#fcfaf8] via-[#fcfaf8] to-transparent"></div>
-          <div className="relative max-h-[300px] sm:max-h-[400px] md:max-h-[500px] overflow-hidden pr-1 touch-none">
+          <div className="relative max-h-[300px] sm:max-h-[400px] md:max-h-[500px] overflow-hidden pr-1">
             <ul 
               ref={listRef}
               className="space-y-3 sm:space-y-4 will-change-transform" 

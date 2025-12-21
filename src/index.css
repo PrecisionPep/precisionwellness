@@ -6,14 +6,11 @@
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    /* Prevent initial scroll to bottom */
-    scroll-padding-top: 0;
   }
 
   body {
     @apply font-sans antialiased;
     overflow-x: hidden;
-    /* Ensure body starts at top */
     margin: 0;
     padding: 0;
   }
