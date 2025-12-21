@@ -3,14 +3,14 @@ import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 
-// Aggressively prevent scrolling to bottom on initial load
-(function preventScrollToBottom() {
-  // Remove any hash immediately
+// Ensure page starts at top on initial load
+(function ensureScrollToTop() {
+  // Remove any hash immediately to prevent anchor scrolling
   if (window.location.hash) {
     window.history.replaceState(null, null, window.location.href.split('#')[0]);
   }
   
-  // Force scroll to top multiple times
+  // Force scroll to top once on initial load
   const forceScrollTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     if (document.body) document.body.scrollTop = 0;
@@ -20,39 +20,16 @@ import './index.css';
   // Run immediately
   forceScrollTop();
   
-  // Run after a short delay
-  setTimeout(forceScrollTop, 0);
-  setTimeout(forceScrollTop, 10);
-  setTimeout(forceScrollTop, 50);
-  setTimeout(forceScrollTop, 100);
-  setTimeout(forceScrollTop, 200);
-  
-  // Run after DOM is ready
+  // Run once after DOM is ready
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', forceScrollTop);
+    document.addEventListener('DOMContentLoaded', forceScrollTop, { once: true });
+  } else {
+    // DOM already ready, run once after a brief delay
+    setTimeout(forceScrollTop, 100);
   }
   
-  // Run after window loads
-  window.addEventListener('load', () => {
-    setTimeout(forceScrollTop, 0);
-    setTimeout(forceScrollTop, 100);
-  });
-  
-  // Watch for scroll events and prevent scrolling down on initial load
-  let scrollPreventionActive = true;
-  const preventScroll = () => {
-    if (scrollPreventionActive && window.scrollY > 100) {
-      forceScrollTop();
-    }
-  };
-  
-  window.addEventListener('scroll', preventScroll, { passive: true });
-  
-  // Disable scroll prevention after 2 seconds
-  setTimeout(() => {
-    scrollPreventionActive = false;
-    window.removeEventListener('scroll', preventScroll);
-  }, 2000);
+  // Run once after window loads
+  window.addEventListener('load', forceScrollTop, { once: true });
 })();
 
 createRoot(document.getElementById('root')!).render(
