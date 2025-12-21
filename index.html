@@ -9,6 +9,19 @@
   <body>
     <div id="root"></div>
     <script type="text/javascript">
+      // Ensure page starts at top immediately
+      (function() {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        
+        // Remove any hash from URL to prevent browser from scrolling to anchor
+        if (window.location.hash) {
+          var url = window.location.href.split('#')[0];
+          window.history.replaceState(null, null, url);
+        }
+      })();
+      
       // Single Page Apps for GitHub Pages
       // https://github.com/rafgraph/spa-github-pages
       // This script checks to see if a redirect is present in the query string,
@@ -23,11 +36,24 @@
           var decoded = l.search.slice(1).split('&').map(function(s) { 
             return s.replace(/~and~/g, '&')
           }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
-          );
+          // Remove hash from decoded URL to prevent scrolling
+          var newUrl = l.pathname.slice(0, -1) + decoded;
+          // Remove any hash
+          newUrl = newUrl.split('#')[0];
+          window.history.replaceState(null, null, newUrl);
+          // Ensure we're still at top after history replace
+          window.scrollTo(0, 0);
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
         }
       }(window.location))
+      
+      // Also ensure we're at top after page loads
+      window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      });
     </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
